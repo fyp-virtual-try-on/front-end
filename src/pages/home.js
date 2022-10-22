@@ -1,18 +1,16 @@
-import React from 'react';
+import React from "react";
+import Intro from "../components/Intro/Intro";
+import Navbar from "../components/Navbar/Navbar";
+import Services from "../components/Services/Services";
 
-const Events = () => {
-return (
-	<div
-	style={{
-		display: 'flex',
-		justifyContent: 'Right',
-		alignItems: 'Right',
-		height: '100vh'
-	}}
-	>
-	<h1>Welcome to GeeksforGeeks Events</h1>
-	</div>
-);
+const Home = () => {
+  return (
+    <>
+      <Navbar />
+      <Intro />
+      <Services />
+    </>
+  );
 };
 
-export default Events;
+export default Home;
