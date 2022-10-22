@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css'
+import {Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="n-wrapper">
@@ -12,8 +13,10 @@ function Navbar() {
         <div className="n-right">
             <div className="n-list">
                 <ul style={{listStyleType:'none'}}>
-                    <li>Home</li>
-                    <li>Services</li>
+                <li>Home </li>
+                    
+                    <li>
+                    VirtualTry </li>
                     <li>Portfolio</li>
                     <li>Testimonals</li>
 
