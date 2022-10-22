@@ -43,7 +43,7 @@ font-weight: bold;
     z-index: 1;
 }
 .i-right>:nth-child(1){
-    transform: scale(0.90);
+    transform: scale(0.88);
     left: 11%;
     top: -9%;
 }
@@ -57,4 +57,22 @@ font-weight: bold;
     transform: scale(1.1);
     left: -1%;
   
+}
+.i-right>:nth-child(4){
+    padding: 0px;
+    transform: scale(0.7);
+    left: -24%;
+  top: -19%;
+  border-radius: 50%;
+}
+.blur{
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: #edd0ff;
+    filter:blur(72px);
+    z-index: -9;
+    top: -17%;
+    left: 66%;
 }

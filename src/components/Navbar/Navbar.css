@@ -1,4 +1,4 @@
-.n-wrapper{
+                  .n-wrapper{
     height: 10hv;
     display: flex;
     justify-content: space-between;
@@ -32,3 +32,7 @@
 cursor: pointer;
 color: var(--orange);
 }
+.n-list>ul>li>a{
+    text-decoration:none ;
+    }
+    
