@@ -1,0 +1,35 @@
+.services{
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 90vh;
+    margin-bottom: 8rem;
+    margin-top: 9rem;
+    margin-bottom: 13rem;
+
+}
+.awesom{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.awesom>:nth-child(1){
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.awesom>:nth-child(2){
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.awesom>:nth-child(3){
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: 1rem;
+}
+.s-button{
+    width: 8rem;
+    height: 2rem;
+    margin-top: 1rem;
+    font-size: 17px;
+}
