@@ -1,0 +1,19 @@
+.Secondbar-wrraper{
+    height: 73px;
+    background-color:var(--Black);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.secondbar{
+    display: flex !important;
+    align-items: center;
+    height: 54px;
+    position: relative;
+    width: 426px;
+    gap: 35px;
+}
+.Sb-buttons{
+    font-size: 15px;
+}
