@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
-import VirtualTryOn from "./pages/VirtualTryOn";
+import VirtualTryOn from "./pages/VirtualTry";
 
 ReactDOM.render(
   <React.StrictMode>

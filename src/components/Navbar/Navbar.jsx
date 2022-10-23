@@ -11,9 +11,11 @@ function Navbar() {
       <div className="n-right">
         <div className="n-list">
           <ul style={{ listStyleType: "none" }}>
-            <li>Home </li>
-
-            <Link to="virtualTryOn">
+          <Link to="/">
+              {" "}
+              <li>Home </li>{" "}
+            </Link>
+            <Link to="virtualTry">
               {" "}
               <li>VirtualTry </li>{" "}
             </Link>

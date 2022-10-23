@@ -6,7 +6,7 @@ import Services from "../components/Services/Services";
 const Home = () => {
   return (
     <>
-      <Navbar />
+     
       <Intro />
       <Services />
     </>
