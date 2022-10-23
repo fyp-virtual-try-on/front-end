@@ -28,11 +28,11 @@
     gap: 2rem;
     margin:4rem;
 }
-.n-list>ul>li:hover{
+.n-list>ul>a:hover{
 cursor: pointer;
 color: var(--orange);
 }
-.n-list>ul>li>a{
+.n-list>ul>a{
     text-decoration:none ;
     }
     

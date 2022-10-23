@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Navbar from './components/Navbar/Navbar'
 import { Routes, Route } from "react-router-dom";
-import VirtualTry from "./pages/VirtualTry";
+import VirtualTry from "./pages/VirtualTry/VirtualTry";
 import Home from "./pages/Home";
 
 function App() {
