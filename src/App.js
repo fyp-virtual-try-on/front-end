@@ -1,21 +1,19 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Intro from './components/Intro/Intro';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Services from './components/Services/Services';
+import React from "react";
+import "./App.css";
+
+import { Routes, Route } from "react-router-dom";
+import VirtualTryOn from "./pages/VirtualTryOn";
+import Home from "./pages/Home";
 
 function App() {
-return (
-	<div className="App">
-	
-      <Navbar />
-
-	<Intro/>
-	<Services/>
-
-	</div>
-);
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="VirtualTryOn" element={<VirtualTryOn />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

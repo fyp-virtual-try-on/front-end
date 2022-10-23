@@ -1,31 +1,30 @@
-import React from 'react'
-import './Navbar.css'
-import {Link } from "react-router-dom";
+import React from "react";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="n-wrapper">
-        <div className="n-left">
-            <div className="n-name">
-                Virtual TryOn
-            </div>
-            <span>toogle</span>
-        </div>
-        <div className="n-right">
-            <div className="n-list">
-                <ul style={{listStyleType:'none'}}>
-                <li>Home </li>
-                    
-                    <li>
-                    VirtualTry </li>
-                    <li>Portfolio</li>
-                    <li>Testimonals</li>
+      <div className="n-left">
+        <div className="n-name">Virtual TryOn</div>
+        <span>toogle</span>
+      </div>
+      <div className="n-right">
+        <div className="n-list">
+          <ul style={{ listStyleType: "none" }}>
+            <li>Home </li>
 
-                </ul>
-            </div>
-      <button className="button">Signin</button>
+            <Link to="virtualTryOn">
+              {" "}
+              <li>VirtualTry </li>{" "}
+            </Link>
+            <li>Portfolio</li>
+            <li>Testimonals</li>
+          </ul>
         </div>
+        <button className="button">Signin</button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
