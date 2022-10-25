@@ -1,78 +1,78 @@
-.intro{
-    display: flex;
-    height: 77vh;
-    margin-top: 3rem;
+.intro {
+  display: flex;
+  height: 77vh;
+  margin-top: 3rem;
 }
-.i-left{
-    display: flex;
-    position: relative;
-    flex: 1;
-    flex-direction: column;
-    gap: 2rem;
+.i-left {
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
 }
-.i-name{
-    display: flex;
-    flex-direction: column;
+.i-name {
+  display: flex;
+  flex-direction: column;
 }
-.i-name>:nth-child(1){
-font-weight: bold;
-    color: var(--black);
-    font-size: 3rem;
+.i-name > :nth-child(1) {
+  font-weight: bold;
+  color: var(--black);
+  font-size: 3rem;
 }
-.i-name>:nth-child(2){
-    font-weight: bold;
-        color: var(--orange);
-        font-size: 3rem;
-    }
-    .i-name>:nth-child(3){
-        font-weight: 100;
-            color: var(--gray);
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        .i-button{
-            width: 8rem;
-            height: 4rem;
-        }
-.i-right{
-    flex: 1;
-    position: relative;
+.i-name > :nth-child(2) {
+  font-weight: bold;
+  color: var(--orange);
+  font-size: 3rem;
 }
-.i-right>*{
-    position: absolute;
-    z-index: 1;
+.i-name > :nth-child(3) {
+  font-weight: 100;
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 10px;
 }
-.i-right>:nth-child(1){
-    transform: scale(0.88);
-    left: 11%;
-    top: -9%;
+.i-button {
+  width: 8rem;
+  height: 4rem;
 }
-.i-right>:nth-child(2){
-    transform: scale(0.76);
-    left: 6rem;
-    top: -4.6rem;
+.i-right {
+  flex: 1;
+  position: relative;
+  left: -4%;
 }
-.i-right>:nth-child(3){
-    padding-bottom: 1154px;
-    transform: scale(1.1);
-    left: -1%;
-  
+.i-right > * {
+  position: absolute;
+  z-index: 1;
 }
-.i-right>:nth-child(4){
-    padding: 0px;
-    transform: scale(0.7);
-    left: -24%;
+.i-right > :nth-child(1) {
+  transform: scale(0.88);
+  left: 11%;
+  top: -9%;
+}
+.i-right > :nth-child(2) {
+  transform: scale(0.76);
+  left: 6rem;
+  top: -4.6rem;
+}
+.i-right > :nth-child(3) {
+  padding-bottom: 1154px;
+  transform: scale(1.1);
+  left: -1%;
+}
+.i-right > :nth-child(4) {
+  padding: 0px;
+  transform: scale(0.7);
+  left: -24%;
   top: -19%;
   border-radius: 50%;
 }
-.blur{
-    position: absolute;
-    width: 22rem;
-    height: 14rem;
-    border-radius: 50%;
-    background: #edd0ff;
-    filter:blur(72px);
-    z-index: -9;
-    top: -17%;
-    left: 66%;
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(72px);
+  z-index: -9;
+  top: -17%;
+  left: 66%;
 }
