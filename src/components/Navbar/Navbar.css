@@ -34,4 +34,9 @@
 }
 .n-list > ul > a {
   text-decoration: none;
+  color: #242d49;
+}
+
+.active {
+  color: blue;
 }
