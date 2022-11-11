@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom";
 import { InboxOutlined } from "@ant-design/icons";
@@ -8,11 +8,14 @@ import "antd/dist/antd.css";
 import imageUpload from "./imageUpload";
 import SecondBar from "./SecondBar/SecondBar";
 import "./VirtualTry.css";
+import useDrivePicker from "react-google-drive-picker";
 
 const { Dragger } = Upload;
 
 function VirtualTry() {
   const [uploadImageURL, setUploadImageURL] = useState("");
+  const [driveObj, setDriveObj] = useState("");
+  const [openPicker, data, authResponse] = useDrivePicker();
 
   const dummyRequest = async ({ file, onSuccess }) => {
     setTimeout(() => {
@@ -44,9 +47,38 @@ function VirtualTry() {
     },
   };
 
+  const handleOpenPicker = () => {
+    openPicker({
+      clientId:
+        "843861638932-3a853gfcdmvdk4k2n7i7g8tbe5fq3qgl.apps.googleusercontent.com",
+      developerKey: "AIzaSyC7PwiaGP7I7hsJ48XfiPNV0n9pBiabPJ0",
+      viewId: "DOCS_IMAGES",
+      // token: token, // pass oauth token in case you already have one
+      showUploadView: true,
+      showUploadFolders: true,
+      supportDrives: true,
+      multiselect: false,
+      // customViews: customViewsArray, // custom view
+      callbackFunction: (data) => {
+        if (data.action === "cancel") {
+          console.log("User clicked cancel/close button");
+        }
+        console.log(data);
+        // console.log("imag id=> ", );
+        setDriveObj(data.docs[0]?.id);
+      },
+    });
+  };
+
+  useEffect(() => {
+    if (data) {
+      data?.docs?.map((i) => console.log(i));
+    }
+  }, []);
+
   return (
     <>
-      {console.log({ imageUpload })}
+      {console.log("driveObj", driveObj)}
       <div className="VT-wrapp">
         <div>
           <SecondBar />
@@ -55,39 +87,18 @@ function VirtualTry() {
           <div style={{ textAlign: "center" }}>
             <div class="dropdown">
               <button class=" button dropbtn">Insert an Image</button>
-              <div class="dropdown-content">
-                <a href="#">Capture Image</a>
+              <div class="img-drop-down">
+                <span>Capture Image</span>
                 <Upload {...props}>
-                  <a href="#">Upload from Device</a>
+                  <span style={{ color: "white" }}>Upload from Device</span>
                 </Upload>
-                <a href="#">Upload from Drive</a>
+                <span onClick={() => handleOpenPicker()}>
+                  Upload from Drive
+                </span>
               </div>
             </div>
           </div>
 
-          <div>
-            {!uploadImageURL ? (
-              <Dragger {...props}>
-                <p className="ant-upload-drag-icon">
-                  <InboxOutlined />
-                </p>
-                <p className="ant-upload-text">
-                  Click or drag file to this area to upload
-                </p>
-                <p className="ant-upload-hint">
-                  Support for a single or bulk upload. Strictly prohibit from
-                  uploading company data or other band files
-                </p>
-              </Dragger>
-            ) : (
-              <img
-                src={uploadImageURL}
-                style={{ width: "400px", height: "-webkit-fill-available" }}
-                alt=""
-                srcset=""
-              />
-            )}
-          </div>
           <div style={{ padding: "20px" }}>
             <div>
               <p style={{ textAlign: "center", fontWeight: "bold" }}>
@@ -156,6 +167,57 @@ function VirtualTry() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div>
+            {!uploadImageURL ? (
+              !driveObj ? (
+                <Dragger {...props}>
+                  <p className="ant-upload-drag-icon">
+                    <InboxOutlined />
+                  </p>
+                  <p className="ant-upload-text">
+                    Click or drag file to this area to upload
+                  </p>
+                  <p className="ant-upload-hint">
+                    Support for a single or bulk upload. Strictly prohibit from
+                    uploading company data or other band files
+                  </p>
+                </Dragger>
+              ) : (
+                <img
+                  // src={driveObj?.docs[0]?.embedUrl}
+                  src={
+                    driveObj
+                      ? `https://drive.google.com/uc?export=view&id=${driveObj}`
+                      : null
+                  }
+                  // src="https://drive.google.com/uc?export=view&id=1VOS6M-0ys0g0Kz2AA3WbkDxSV9f0eRG7"
+                  style={{
+                    width: "400px",
+                    height: "-webkit-fill-available",
+                    objectFit: "cover",
+                    width: "100%",
+                  }}
+                  alt=""
+                  srcset=""
+                />
+              )
+            ) : (
+              <img
+                // src={driveObj?.docs[0]?.embedUrl}
+                src={uploadImageURL}
+                // src="https://drive.google.com/uc?export=view&id=1VOS6M-0ys0g0Kz2AA3WbkDxSV9f0eRG7"
+                style={{
+                  width: "400px",
+                  height: "-webkit-fill-available",
+                  objectFit: "cover",
+                  width: "100%",
+                }}
+                alt=""
+                srcset=""
+              />
+            )}
           </div>
         </div>
       </div>
