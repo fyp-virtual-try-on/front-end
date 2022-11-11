@@ -1,7 +1,11 @@
 import React from "react";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 function Navbar() {
+  let activeStyle = {
+    color: "blue",
+  };
   return (
     <div className="n-wrapper">
       <div className="n-left">
@@ -11,14 +15,21 @@ function Navbar() {
       <div className="n-right">
         <div className="n-list">
           <ul style={{ listStyleType: "none" }}>
-          <Link to="/">
+            <NavLink
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              to="/"
+              end
+            >
               {" "}
               <li>Home </li>{" "}
-            </Link>
-            <Link to="virtualTry">
+            </NavLink>
+            <NavLink
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              to="virtualTry"
+            >
               {" "}
               <li>VirtualTry </li>{" "}
-            </Link>
+            </NavLink>
             <li>Portfolio</li>
             <li>Testimonals</li>
           </ul>
