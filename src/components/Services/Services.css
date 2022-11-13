@@ -3,7 +3,7 @@
   display: flex;
   height: 90vh;
   margin-bottom: 8rem;
-  margin-top: 15rem;
+  margin-top: 11.5rem;
   margin-bottom: 13rem;
 }
 .awesom {
@@ -13,12 +13,12 @@
 }
 .awesom > :nth-child(1) {
   color: var(--black);
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 .awesom > :nth-child(2) {
   color: var(--orange);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .awesom > :nth-child(3) {
@@ -31,4 +31,37 @@
   height: 2rem;
   margin-top: 1rem;
   font-size: 17px;
+}
+.cards{
+position: relative;
+}
+.cards>*{
+  position: absolute;
+}
+.s-blur2 {
+  left: -33rem;
+  top: 16rem;
+}
+
+.s-blur1 {
+  top: 19rem;
+  left: 23rem;
+}
+@media screen and (max-width: 480px) {
+  .services {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 66rem;
+    padding: 0;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 17rem;
+  }
+  .cards > * {
+    position: static;
+  }
 }

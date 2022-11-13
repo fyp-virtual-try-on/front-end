@@ -3,6 +3,8 @@ import React from "react";
 import profile from "../../images/profile.png";
 import email from "../../images/email.jpg";
 import pass from "../../images/pass.png";
+import { NavLink } from 'react-router-dom';
+
 function SignUp() {
   return (
     <div className="su-main">
@@ -38,7 +40,7 @@ function SignUp() {
           </div>
            
             <p className="su-link">
-              <a href="#">Forgot password ?</a> Or<a href="#">Sign Up</a>
+              <a href="#">Forgot password ?</a> Or<NavLink to="/SignIn"><a href="#">Sign In</a></NavLink>
             </p>
            
  

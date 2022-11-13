@@ -34,7 +34,7 @@ function Navbar() {
               {" "}
               <li>VirtualTry </li>{" "}
             </NavLink>
-            <li>Portfolio</li>
+            <NavLink to="/Cart"> <li>Cart</li></NavLink>
             <NavLink to="/About"> <li>AboutUs</li></NavLink>
           </ul>
           
