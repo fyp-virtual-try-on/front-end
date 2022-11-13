@@ -2,6 +2,10 @@ import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import SignIn  from "../../pages/SignIn/SignIn"
+import SignUp  from "../../pages/SignUp/SignUp"
+import About  from "../../pages/About/About"
+
 function Navbar() {
   let activeStyle = {
     color: "blue",
@@ -30,11 +34,13 @@ function Navbar() {
               {" "}
               <li>VirtualTry </li>{" "}
             </NavLink>
-            <li>Portfolio</li>
-            <li>Testimonals</li>
+            <NavLink to="/Cart"> <li>Cart</li></NavLink>
+            <NavLink to="/About"> <li>AboutUs</li></NavLink>
           </ul>
+          
         </div>
-        <button className="button">Signin</button>
+        <NavLink to="/SignUp"  style={{paddingRight:"26px"}}><button className="button navLink">SignUp</button></NavLink>
+        <NavLink to="/SignIn"><button className="button navLink">Signin</button></NavLink>
       </div>
     </div>
   );

@@ -1,0 +1,51 @@
+.About {
+  display: flex;
+  /* height: 157vh; */
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.About-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.About-name > :nth-child(1) {
+  font-weight: bold;
+  color: var(--black);
+  font-size: 3.5rem;
+}
+.About-name > :nth-child(2) {
+  font-weight: bold;
+  color: var(--orange);
+  font-size: 2rem;
+}
+.About-name > :nth-child(3) {
+  font-weight: 100;
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 10px;
+}
+.About-button {
+  width: 8rem;
+  height: 3rem;
+  margin-top: 25px;
+}
+.blur {
+  position: absolute;
+  width: 25rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(72px);
+  z-index: -9;
+  top: 1%;
+  left: 66%;
+}
+.ex{
+  margin-top: 1rem;
+}
