@@ -10,6 +10,13 @@ import SecondBar from "./SecondBar/SecondBar";
 import "./VirtualTry.css";
 import useDrivePicker from "react-google-drive-picker";
 
+import img1 from "../../images/img_1.jpg";
+import img2 from "../../images/img_2.jpg";
+import img3 from "../../images/img_3.jpg";
+import img4 from "../../images/img_4.jpg";
+import img5 from "../../images/img_5.jpg";
+import img6 from "../../images/img_6.jpg";
+
 const { Dragger } = Upload;
 
 function VirtualTry() {
@@ -112,58 +119,27 @@ function VirtualTry() {
                 }}
               >
                 <div style={{ padding: "20px" }}>
-                  <img
-                    src="https://img.freepik.com/premium-photo/waterfall-landscape-plitvice-lakes-croatia_31965-5308.jpg?w=2000"
-                    alt=""
-                    width={159}
-                    height={184}
-                    srcset=""
-                  />
+                  <img src={img1} alt="" width={159} height={184} srcset="" />
                 </div>
 
                 <div style={{ padding: "20px" }}>
-                  <img
-                    src="https://img.freepik.com/premium-photo/waterfall-landscape-plitvice-lakes-croatia_31965-5308.jpg?w=2000"
-                    alt=""
-                    width={159}
-                    height={184}
-                  />
+                  <img src={img2} alt="" width={159} height={184} />
                 </div>
 
                 <div style={{ padding: "20px" }}>
-                  <img
-                    src="https://img.freepik.com/premium-photo/waterfall-landscape-plitvice-lakes-croatia_31965-5308.jpg?w=2000"
-                    alt=""
-                    width={159}
-                    height={184}
-                  />
+                  <img src={img3} alt="" width={159} height={184} />
                 </div>
 
                 <div style={{ padding: "20px" }}>
-                  <img
-                    src="https://img.freepik.com/premium-photo/waterfall-landscape-plitvice-lakes-croatia_31965-5308.jpg?w=2000"
-                    alt=""
-                    width={159}
-                    height={184}
-                  />
+                  <img src={img4} alt="" width={159} height={184} />
                 </div>
 
                 <div style={{ padding: "20px" }}>
-                  <img
-                    src="https://img.freepik.com/premium-photo/waterfall-landscape-plitvice-lakes-croatia_31965-5308.jpg?w=2000"
-                    alt=""
-                    width={159}
-                    height={184}
-                  />
+                  <img src={img5} alt="" width={159} height={184} />
                 </div>
 
                 <div style={{ padding: "20px" }}>
-                  <img
-                    src="https://img.freepik.com/premium-photo/waterfall-landscape-plitvice-lakes-croatia_31965-5308.jpg?w=2000"
-                    alt=""
-                    width={159}
-                    height={184}
-                  />
+                  <img src={img6} alt="" width={159} height={184} />
                 </div>
               </div>
             </div>
