@@ -3,10 +3,10 @@ import "./Contact.css";
 import emailjs from "@emailjs/browser";
 // import { themeContext } from "../../Context";
 const Contact = () => {
-//   const theme = useContext(themeContext);
-//   const darkMode = theme.state.darkMode;
+  //   const theme = useContext(themeContext);
+  //   const darkMode = theme.state.darkMode;
   const form = useRef();
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -32,7 +32,7 @@ const Contact = () => {
   return (
     <div className="contact-form" id="contact">
       {/* left side copy and paste from work section */}
-      <div  className="w-left">
+      <div className="w-left">
         <div className="awesome">
           {/* darkMode */}
           <span>Contact Us</span>
@@ -46,10 +46,20 @@ const Contact = () => {
       {/* right side form */}
       <div className="c-right">
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" className="user"  placeholder="Name"/>
-          <input type="email" name="user_email" className="user" placeholder="Email"/>
-          <textarea name="message" className="user" placeholder="Message"/>
-          <input type="submit" value="Send" className="button"/>
+          <input
+            type="text"
+            name="user_name"
+            className="user input-field-style"
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            name="user_email"
+            className="user input-field-style"
+            placeholder="Email"
+          />
+          <textarea name="message" className="user" placeholder="Message" />
+          <input type="submit" value="Send" className="button" />
           <span>{done && "Thanks for Contacting me"}</span>
           <div
             className="blur c-blur1"

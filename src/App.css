@@ -34,3 +34,8 @@
   font-family: Gumela;
   src: url("./fonts/Gumela\ Regular.otf");
 }
+
+.input-field-style {
+  background: white;
+  border: 1px solid orange;
+}
