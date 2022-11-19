@@ -3,6 +3,7 @@ import "./Cart.css";
 import img1 from "./../../images/img_1.jpg";
 import img2 from "./../../images/img_2.jpg";
 import img3 from "./../../images/img_3.jpg";
+import { NavLink } from "react-router-dom";
 
 function Cart() {
   return (
@@ -72,7 +73,8 @@ function Cart() {
             </div>
             <div className="total-amount">$6.18</div>
           </div>
-          <button className=" ch-button button">Checkout</button>
+         
+          <NavLink to="/CheckOut"><button className=" ch-button button">Checkout</button> </NavLink>
         </div>
       </div>
     </div>
