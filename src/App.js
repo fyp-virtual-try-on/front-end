@@ -9,6 +9,7 @@ import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
 import Cart from "./pages/Cart/Cart";
 
+import Checkout from "./pages/CheckOut/Checkout";
 
 import Home from "./pages/Home";
 
@@ -21,11 +22,12 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/About" element={<About />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/CheckOut" element={<Checkout />} />
 
         <Route path="/" element={<Home />} />
         <Route path="/VirtualTry" element={<VirtualTry />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

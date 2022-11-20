@@ -7,8 +7,11 @@ import "antd/dist/antd.css";
 // import { Button, Dropdown, Menu, Space } from 'antd';
 import imageUpload from "./imageUpload";
 import SecondBar from "./SecondBar/SecondBar";
+import { Button } from "@material-ui/core";
+import Profile from "./Profile";
 import "./VirtualTry.css";
 import useDrivePicker from "react-google-drive-picker";
+import Webcam from "react-webcam";
 
 import img1 from "../../images/img_1.jpg";
 import img2 from "../../images/img_2.jpg";
@@ -18,10 +21,24 @@ import img5 from "../../images/img_5.jpg";
 import img6 from "../../images/img_6.jpg";
 
 const { Dragger } = Upload;
+const videoConstraints = {
+  width: 400,
+  height: 400,
+  facingMode: "user",
+};
 
 function VirtualTry() {
   const [uploadImageURL, setUploadImageURL] = useState("");
   const [driveObj, setDriveObj] = useState("");
+  const [selectedImage, setSelectedImage] = useState("");
+  const [isCamera, setIsCamera] = useState(false);
+  const [picture, setPicture] = useState("");
+  const webcamRef = React.useRef(null);
+  const capture = React.useCallback(() => {
+    const pictureSrc = webcamRef.current.getScreenshot();
+    setPicture(pictureSrc);
+  });
+
   const [openPicker, data, authResponse] = useDrivePicker();
 
   const dummyRequest = async ({ file, onSuccess }) => {
@@ -85,7 +102,6 @@ function VirtualTry() {
 
   return (
     <>
-      {console.log("driveObj", driveObj)}
       <div className="VT-wrapp">
         <div>
           <SecondBar />
@@ -95,7 +111,7 @@ function VirtualTry() {
             <div class="dropdown">
               <button class=" button dropbtn">Insert an Image</button>
               <div class="img-drop-down">
-                <span>Capture Image</span>
+                <span onClick={() => setIsCamera(true)}>Capture Image</span>
                 <Upload {...props}>
                   <span style={{ color: "white" }}>Upload from Device</span>
                 </Upload>
@@ -103,6 +119,58 @@ function VirtualTry() {
                   Upload from Drive
                 </span>
               </div>
+            </div>
+            <div>
+              <img src={selectedImage} alt="" />
+            </div>
+            <div className="output">output</div>
+
+            <div style={{ marginTop: "20px" }}>
+              <button className="button">Execute</button>
+            </div>
+            <div>
+              {isCamera ? (
+                <>
+                  <Webcam
+                    audio={false}
+                    height={400}
+                    ref={webcamRef}
+                    width={400}
+                    screenshotFormat="image/jpeg"
+                    videoConstraints={videoConstraints}
+                  />
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setPicture();
+                    }}
+                    className="button"
+                  >
+                    Retake
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      capture();
+                    }}
+                    className="button"
+                  >
+                    Capture
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      setIsCamera(false);
+                    }}
+                    className="button"
+                  >
+                    cancel
+                  </button>
+                </>
+              ) : (
+                ""
+              )}
             </div>
           </div>
 
@@ -118,27 +186,51 @@ function VirtualTry() {
                   gridColumnGap: "8px",
                 }}
               >
-                <div style={{ padding: "20px" }}>
+                <div
+                  onClick={() => setSelectedImage(img1)}
+                  className={selectedImage === img1 ? "item-selected" : ""}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img1} alt="" width={159} height={184} srcset="" />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  className={selectedImage === img2 ? "item-selected" : ""}
+                  onClick={() => setSelectedImage(img2)}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img2} alt="" width={159} height={184} />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  className={selectedImage === img3 ? "item-selected" : ""}
+                  onClick={() => setSelectedImage(img3)}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img3} alt="" width={159} height={184} />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  onClick={() => setSelectedImage(img4)}
+                  className={selectedImage === img4 ? "item-selected" : ""}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img4} alt="" width={159} height={184} />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  onClick={() => setSelectedImage(img5)}
+                  className={selectedImage === img5 ? "item-selected" : ""}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img5} alt="" width={159} height={184} />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  onClick={() => setSelectedImage(img6)}
+                  className={selectedImage === img6 ? "item-selected" : ""}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img6} alt="" width={159} height={184} />
                 </div>
               </div>
@@ -148,18 +240,31 @@ function VirtualTry() {
           <div>
             {!uploadImageURL ? (
               !driveObj ? (
-                <Dragger {...props}>
-                  <p className="ant-upload-drag-icon">
-                    <InboxOutlined />
-                  </p>
-                  <p className="ant-upload-text">
-                    Click or drag file to this area to upload
-                  </p>
-                  <p className="ant-upload-hint">
-                    Support for a single or bulk upload. Strictly prohibit from
-                    uploading company data or other band files
-                  </p>
-                </Dragger>
+                !picture ? (
+                  <Dragger {...props}>
+                    <p className="ant-upload-drag-icon">
+                      <InboxOutlined />
+                    </p>
+                    <p className="ant-upload-text">
+                      Click or drag file to this area to upload
+                    </p>
+                    <p className="ant-upload-hint">
+                      Support for a single or bulk upload. Strictly prohibit
+                      from uploading company data or other band files
+                    </p>
+                  </Dragger>
+                ) : (
+                  <img
+                    src={picture}
+                    style={{
+                      width: "400px",
+                      height: "-webkit-fill-available",
+                      objectFit: "cover",
+                      width: "100%",
+                    }}
+                    alt=""
+                  />
+                )
               ) : (
                 <img
                   // src={driveObj?.docs[0]?.embedUrl}
