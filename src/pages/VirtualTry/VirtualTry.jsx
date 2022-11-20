@@ -30,6 +30,7 @@ const videoConstraints = {
 function VirtualTry() {
   const [uploadImageURL, setUploadImageURL] = useState("");
   const [driveObj, setDriveObj] = useState("");
+  const [selectedImage, setSelectedImage] = useState("");
   const [isCamera, setIsCamera] = useState(false);
   const [picture, setPicture] = useState("");
   const webcamRef = React.useRef(null);
@@ -119,7 +120,14 @@ function VirtualTry() {
                 </span>
               </div>
             </div>
+            <div>
+              <img src={selectedImage} alt="" />
+            </div>
+            <div className="output">output</div>
 
+            <div style={{ marginTop: "20px" }}>
+              <button className="button">Execute</button>
+            </div>
             <div>
               {isCamera ? (
                 <>
@@ -178,27 +186,51 @@ function VirtualTry() {
                   gridColumnGap: "8px",
                 }}
               >
-                <div style={{ padding: "20px" }}>
+                <div
+                  onClick={() => setSelectedImage(img1)}
+                  className={selectedImage === img1 ? "item-selected" : ""}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img1} alt="" width={159} height={184} srcset="" />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  className={selectedImage === img2 ? "item-selected" : ""}
+                  onClick={() => setSelectedImage(img2)}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img2} alt="" width={159} height={184} />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  className={selectedImage === img3 ? "item-selected" : ""}
+                  onClick={() => setSelectedImage(img3)}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img3} alt="" width={159} height={184} />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  onClick={() => setSelectedImage(img4)}
+                  className={selectedImage === img4 ? "item-selected" : ""}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img4} alt="" width={159} height={184} />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  onClick={() => setSelectedImage(img5)}
+                  className={selectedImage === img5 ? "item-selected" : ""}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img5} alt="" width={159} height={184} />
                 </div>
 
-                <div style={{ padding: "20px" }}>
+                <div
+                  onClick={() => setSelectedImage(img6)}
+                  className={selectedImage === img6 ? "item-selected" : ""}
+                  style={{ padding: "20px" }}
+                >
                   <img src={img6} alt="" width={159} height={184} />
                 </div>
               </div>
