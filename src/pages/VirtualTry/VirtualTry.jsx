@@ -9,16 +9,17 @@ import imageUpload from "./imageUpload";
 import SecondBar from "./SecondBar/SecondBar";
 import { Button } from "@material-ui/core";
 import Profile from "./Profile";
+import { useSelector } from "react-redux";
 import "./VirtualTry.css";
 import useDrivePicker from "react-google-drive-picker";
 import Webcam from "react-webcam";
+import { useDispatch } from "react-redux";
+import { cartItem } from "../../store/cartItem/cartItemSlice";
 
 import img1 from "../../images/img_1.jpg";
 import img2 from "../../images/img_2.jpg";
 import img3 from "../../images/img_3.jpg";
 import img4 from "../../images/img_4.jpg";
-import img5 from "../../images/img_5.jpg";
-import img6 from "../../images/img_6.jpg";
 
 const { Dragger } = Upload;
 const videoConstraints = {
@@ -28,10 +29,15 @@ const videoConstraints = {
 };
 
 function VirtualTry() {
+  const todos = useSelector((state) => state);
+  // const item = useSelector((state) => state);
   const [uploadImageURL, setUploadImageURL] = useState("");
+  const dispatch = useDispatch();
+
   const [driveObj, setDriveObj] = useState("");
   const [selectedImage, setSelectedImage] = useState("");
   const [isCamera, setIsCamera] = useState(false);
+
   const [picture, setPicture] = useState("");
   const webcamRef = React.useRef(null);
   const capture = React.useCallback(() => {
@@ -100,8 +106,33 @@ function VirtualTry() {
     }
   }, []);
 
+  const items = [
+    {
+      id: 1,
+      name: "T-Shirt",
+      image: img1,
+    },
+    {
+      id: 2,
+      name: "Shirt",
+      image: img2,
+    },
+    {
+      id: 3,
+      name: "Pant",
+      image: img3,
+    },
+    {
+      id: 4,
+      name: "Shoes",
+      image: img4,
+    },
+  ];
+
   return (
     <>
+      {console.log("todos", todos)}
+      {/* {console.log("item", item)} */}
       <div className="VT-wrapp">
         <div>
           <SecondBar />
@@ -186,53 +217,30 @@ function VirtualTry() {
                   gridColumnGap: "8px",
                 }}
               >
-                <div
-                  onClick={() => setSelectedImage(img1)}
-                  className={selectedImage === img1 ? "item-selected" : ""}
-                  style={{ padding: "20px" }}
-                >
-                  <img src={img1} alt="" width={159} height={184} srcset="" />
-                </div>
-
-                <div
-                  className={selectedImage === img2 ? "item-selected" : ""}
-                  onClick={() => setSelectedImage(img2)}
-                  style={{ padding: "20px" }}
-                >
-                  <img src={img2} alt="" width={159} height={184} />
-                </div>
-
-                <div
-                  className={selectedImage === img3 ? "item-selected" : ""}
-                  onClick={() => setSelectedImage(img3)}
-                  style={{ padding: "20px" }}
-                >
-                  <img src={img3} alt="" width={159} height={184} />
-                </div>
-
-                <div
-                  onClick={() => setSelectedImage(img4)}
-                  className={selectedImage === img4 ? "item-selected" : ""}
-                  style={{ padding: "20px" }}
-                >
-                  <img src={img4} alt="" width={159} height={184} />
-                </div>
-
-                <div
-                  onClick={() => setSelectedImage(img5)}
-                  className={selectedImage === img5 ? "item-selected" : ""}
-                  style={{ padding: "20px" }}
-                >
-                  <img src={img5} alt="" width={159} height={184} />
-                </div>
-
-                <div
-                  onClick={() => setSelectedImage(img6)}
-                  className={selectedImage === img6 ? "item-selected" : ""}
-                  style={{ padding: "20px" }}
-                >
-                  <img src={img6} alt="" width={159} height={184} />
-                </div>
+                {items.map((item) => (
+                  <div
+                    onClick={() => setSelectedImage(item.image)}
+                    className={
+                      selectedImage === item.image ? "item-selected" : ""
+                    }
+                    style={{ padding: "20px" }}
+                  >
+                    <img
+                      src={item.image}
+                      alt=""
+                      width={159}
+                      height={184}
+                      srcset=""
+                    />
+                    <p style={{ textAlign: "center" }}>{item.name}</p>
+                    <button
+                      onClick={() => dispatch(cartItem(item))}
+                      className="button"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

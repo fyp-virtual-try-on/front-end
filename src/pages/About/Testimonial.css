@@ -76,9 +76,3 @@
     height: 70px;
   }
 }
-
-.ant-upload-drag-container {
-  background: url("../../images/image\ lgao.jpg") no-repeat center center;
-  background-size: contain;
-  opacity: 0.5;
-}
