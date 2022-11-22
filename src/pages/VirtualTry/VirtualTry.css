@@ -78,3 +78,9 @@ VT-dropdown {
   border: 1px solid var(--orange);
   height: 300px;
 }
+
+.ant-upload-drag-container {
+  background: url("../../images/image\ lgao.jpg") no-repeat center center;
+  background-size: contain;
+  opacity: 0.5;
+}
