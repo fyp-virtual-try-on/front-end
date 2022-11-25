@@ -5,6 +5,19 @@
   grid-template-columns: 1fr 1fr 1fr;
   height: 566px;
 }
+@media screen and (max-width: 1500px) {
+  .VT-grid {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .VT-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
 VT-dropdown {
 }
 .dropbtn {
@@ -83,4 +96,24 @@ VT-dropdown {
   background: url("../../images/image\ lgao.jpg") no-repeat center center;
   background-size: contain;
   opacity: 0.5;
+}
+
+.item-listing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 8px;
+}
+
+@media screen and (max-width: 450px) {
+  .item-listing {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

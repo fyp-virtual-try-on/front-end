@@ -3,6 +3,13 @@
   height: 77vh;
   margin-top: 3rem;
 }
+
+@media screen and (max-width: 500px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+
 .i-left {
   display: flex;
   position: relative;
@@ -58,6 +65,15 @@
   transform: scale(1.1);
   left: -1%;
 }
+
+@media screen and (max-width: 500px) {
+  .i-right > :nth-child(3) {
+    padding-bottom: 1154px;
+    transform: scale(1.1);
+    left: -32%;
+  }
+}
+
 .i-right > :nth-child(4) {
   padding: 0px;
   transform: scale(0.7);
