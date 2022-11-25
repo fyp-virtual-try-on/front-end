@@ -17,6 +17,13 @@
   border-radius: 60px;
   background-color: white;
 }
+@media screen and (max-width: 990px) {
+  .sub-main {
+    width: auto;
+    padding: 10px;
+  }
+}
+
 .imgs {
   padding-top: 20px;
   justify-content: center;

@@ -210,20 +210,15 @@ function VirtualTry() {
               <p style={{ textAlign: "center", fontWeight: "bold" }}>
                 Virtual TryOn Catalouge
               </p>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gridColumnGap: "8px",
-                }}
-              >
+              <div className="item-listing">
                 {items.map((item) => (
                   <div
                     onClick={() => setSelectedImage(item.image)}
                     className={
-                      selectedImage === item.image ? "item-selected" : ""
+                      selectedImage === item.image
+                        ? "item-selected"
+                        : "" + "item"
                     }
-                    style={{ padding: "20px" }}
                   >
                     <img
                       src={item.image}
