@@ -111,21 +111,33 @@ function VirtualTry() {
       id: 1,
       name: "T-Shirt",
       image: img1,
+      quantity: 1,
+      price: 100,
+      totalPrice: 100,
     },
     {
       id: 2,
       name: "Shirt",
       image: img2,
+      quantity: 1,
+      price: 200,
+      totalPrice: 200,
     },
     {
       id: 3,
       name: "Pant",
       image: img3,
+      quantity: 1,
+      price: 300,
+      totalPrice: 300,
     },
     {
       id: 4,
       name: "Shoes",
       image: img4,
+      quantity: 1,
+      price: 400,
+      totalPrice: 400,
     },
   ];
 
@@ -138,124 +150,63 @@ function VirtualTry() {
           <SecondBar />
         </div>
         <div className="VT-grid">
-          <div style={{ textAlign: "center" }}>
-            <div class="dropdown">
-              <button class=" button dropbtn">Insert an Image</button>
-              <div class="img-drop-down">
-                <span onClick={() => setIsCamera(true)}>Capture Image</span>
-                <Upload {...props}>
-                  <span style={{ color: "white" }}>Upload from Device</span>
-                </Upload>
-                <span onClick={() => handleOpenPicker()}>
-                  Upload from Drive
-                </span>
-              </div>
-            </div>
-            <div>
-              <img src={selectedImage} alt="" />
-            </div>
-            <div className="output">output</div>
-
-            <div style={{ marginTop: "20px" }}>
-              <button className="button">Execute</button>
-            </div>
-            <div>
-              {isCamera ? (
-                <>
-                  <Webcam
-                    audio={false}
-                    height={400}
-                    ref={webcamRef}
-                    width={400}
-                    screenshotFormat="image/jpeg"
-                    videoConstraints={videoConstraints}
-                  />
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setPicture();
-                    }}
-                    className="button"
-                  >
-                    Retake
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      capture();
-                    }}
-                    className="button"
-                  >
-                    Capture
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-
-                      setIsCamera(false);
-                    }}
-                    className="button"
-                  >
-                    cancel
-                  </button>
-                </>
-              ) : (
-                ""
-              )}
-            </div>
-          </div>
-
-          <div style={{ padding: "20px" }}>
-            <div>
-              <p style={{ textAlign: "center", fontWeight: "bold" }}>
-                Virtual TryOn Catalouge
-              </p>
-              <div className="item-listing">
-                {items.map((item) => (
-                  <div
-                    onClick={() => setSelectedImage(item.image)}
-                    className={
-                      selectedImage === item.image
-                        ? "item-selected"
-                        : "" + "item"
-                    }
-                  >
-                    <img
-                      src={item.image}
-                      alt=""
-                      width={159}
-                      height={184}
-                      srcset=""
-                    />
-                    <p style={{ textAlign: "center" }}>{item.name}</p>
-                    <button
-                      onClick={() => dispatch(cartItem(item))}
-                      className="button"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           <div>
             {!uploadImageURL ? (
               !driveObj ? (
                 !picture ? (
-                  <Dragger {...props}>
-                    <p className="ant-upload-drag-icon">
-                      <InboxOutlined />
-                    </p>
-                    <p className="ant-upload-text">
-                      Click or drag file to this area to upload
-                    </p>
-                    <p className="ant-upload-hint">
-                      Support for a single or bulk upload. Strictly prohibit
-                      from uploading company data or other band files
-                    </p>
-                  </Dragger>
+                  isCamera ? (
+                    <>
+                      <Webcam
+                        audio={false}
+                        height={"100%"}
+                        ref={webcamRef}
+                        width={"100%"}
+                        screenshotFormat="image/jpeg"
+                        videoConstraints={videoConstraints}
+                      />
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setPicture();
+                        }}
+                        className="button"
+                      >
+                        Retake
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          capture();
+                        }}
+                        className="button"
+                      >
+                        Capture
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+
+                          setIsCamera(false);
+                        }}
+                        className="button"
+                      >
+                        cancel
+                      </button>
+                    </>
+                  ) : (
+                    <Dragger {...props}>
+                      <p className="ant-upload-drag-icon">
+                        <InboxOutlined />
+                      </p>
+                      <p className="ant-upload-text">
+                        Click or drag file to this area to upload
+                      </p>
+                      <p className="ant-upload-hint">
+                        Support for a single or bulk upload. Strictly prohibit
+                        from uploading company data or other band files
+                      </p>
+                    </Dragger>
+                  )
                 ) : (
                   <img
                     src={picture}
@@ -302,6 +253,77 @@ function VirtualTry() {
                 srcset=""
               />
             )}
+            {/* <div className="insert-img-btn-mob dropdown">
+              <button class=" button dropbtn">Insert an Image</button>
+              <div class="img-drop-down">
+                <span onClick={() => setIsCamera(true)}>Capture Image</span>
+                <Upload {...props}>
+                  <span style={{ color: "white" }}>Upload from Device</span>
+                </Upload>
+                <span onClick={() => handleOpenPicker()}>
+                  Upload from Drive
+                </span>
+              </div>
+            </div> */}
+          </div>
+
+          <div style={{ padding: "20px" }}>
+            <div>
+              <p style={{ textAlign: "center", fontWeight: "bold" }}>
+                Virtual TryOn Catalouge
+              </p>
+              <div className="item-listing">
+                {items.map((item) => (
+                  <div
+                    key={item.id}
+                    onClick={() => setSelectedImage(item.image)}
+                    className={
+                      selectedImage === item.image
+                        ? "item-selected item"
+                        : "" + "item"
+                    }
+                  >
+                    <img
+                      src={item.image}
+                      alt=""
+                      width={159}
+                      height={184}
+                      srcset=""
+                    />
+                    <p style={{ textAlign: "center" }}>{item?.name}</p>
+                    <button
+                      onClick={() => dispatch(cartItem(item))}
+                      className="button"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div style={{ textAlign: "center" }}>
+            <div class="dropdown">
+              <button class=" button dropbtn">Insert an Image</button>
+              <div class="img-drop-down">
+                <span onClick={() => setIsCamera(true)}>Capture Image</span>
+                <Upload {...props}>
+                  <span style={{ color: "white" }}>Upload from Device</span>
+                </Upload>
+                <span onClick={() => handleOpenPicker()}>
+                  Upload from Drive
+                </span>
+              </div>
+            </div>
+            <div>
+              <img src={selectedImage} alt="" />
+            </div>
+            {/* <div className="output">output</div> */}
+
+            <div style={{ marginTop: "20px" }}>
+              <button className="button">Execute</button>
+            </div>
           </div>
         </div>
       </div>

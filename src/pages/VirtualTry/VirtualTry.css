@@ -11,10 +11,20 @@
     height: auto;
   }
 }
+.insert-img-btn-mob {
+  display: none;
+}
 @media screen and (max-width: 650px) {
   .VT-grid {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .insert-img-btn-mob {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
   }
 }
 

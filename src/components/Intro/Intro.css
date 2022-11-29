@@ -69,8 +69,8 @@
 @media screen and (max-width: 500px) {
   .i-right > :nth-child(3) {
     padding-bottom: 1154px;
-    transform: scale(1.1);
-    left: -32%;
+    transform: scale(0.9);
+    left: -80%;
   }
 }
 
@@ -84,6 +84,7 @@
 .blur {
   position: absolute;
   width: 22rem;
+  display: none;
   height: 14rem;
   border-radius: 50%;
   background: #edd0ff;

@@ -15,7 +15,7 @@ function Intro() {
           <span>
             Shopping is Finally Easier With Personalized virtual Try-On
           </span>
-          <span style={{ width: "752px" }}>
+          <span>
             The leading virtual fitting and styling solution for business of all
             sizes Try on items, get accurate size recommendations and style
             outfits all from within your elevated online store. Benefit from
