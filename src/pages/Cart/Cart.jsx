@@ -29,9 +29,7 @@ function Cart() {
           </div>
           <div className="prices">
             <div className="amount">$2.99</div>
-            <div className="save">
-              <u>Save for later</u>
-            </div>
+    
             <div className="remove">
               <u>Remove</u>
             </div>
@@ -54,9 +52,7 @@ function Cart() {
           </div>
           <div className="prices">
             <div className="amount">$2.99</div>
-            <div className="save">
-              <u>Save for later</u>
-            </div>
+          
             <div className="remove">
               <u>Remove</u>
             </div>

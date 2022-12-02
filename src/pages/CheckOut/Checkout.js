@@ -108,7 +108,7 @@ export default function Checkout() {
             </React.Fragment>
           )}
         </Paper>
-        <Copyright />
+        {/* <Copyright /> */}
       </Container>
     </ThemeProvider>
   );
