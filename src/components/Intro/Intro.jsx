@@ -25,7 +25,6 @@ function Intro() {
             <img src={Vector1}alt="" />
             <img src={Vector2}alt="" />
             <img src={girls}alt="" />
-            <img src={glassesimoji} alt="" />
             <div style={{top:'-4%', left:'68%' ,    transform: 'scale(0.85)'}}>
               <FloatingDiv image={crown} txt1='style' txt2='Outfits'/>
             </div>

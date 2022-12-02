@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 }
 
 .About-name {
@@ -21,7 +20,7 @@
 }
 .About-name > :nth-child(2) {
   font-weight: bold;
-  color: var(--orange);
+  color: var(--text);
   font-size: 2rem;
 }
 .About-name > :nth-child(3) {
@@ -46,6 +45,6 @@
   top: 1%;
   left: 66%;
 }
-.ex{
-  margin-top: 1rem;
+.ex {
+  margin-top: 4rem;
 }

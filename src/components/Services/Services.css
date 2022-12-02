@@ -17,7 +17,7 @@
   font-weight: bold;
 }
 .awesom > :nth-child(2) {
-  color: var(--orange);
+  color: var(--text);
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -32,10 +32,10 @@
   margin-top: 1rem;
   font-size: 17px;
 }
-.cards{
-position: relative;
+.cards {
+  position: relative;
 }
-.cards>*{
+.cards > * {
   position: absolute;
 }
 .s-blur2 {
@@ -49,7 +49,7 @@ position: relative;
 }
 @media screen and (max-width: 480px) {
   .services {
-    margin-top: 0;
+    margin-top: 46rem;
     flex-direction: column;
     gap: 5rem;
     height: 66rem;
@@ -59,7 +59,7 @@ position: relative;
   .cards {
     display: flex;
     flex-direction: column;
-    gap: 17rem;
+    gap: 18rem;
   }
   .cards > * {
     position: static;

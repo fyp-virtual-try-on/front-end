@@ -5,18 +5,25 @@
   padding-top: 90px;
   padding-bottom: 90px;
   /* background-color: #e1e3eb; */
-  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  /* background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%); */
 }
 .sub-main {
   display: flex;
   justify-content: center;
   height: 590px;
   width: 35%;
-  box-shadow: 0px 21px 29px 13px rgb(255 2 4 / 53%);
+  box-shadow: 16px 28px 36px 15px rgb(249 62 11 / 53%);
   padding-top: 30px;
-  border-radius: 60px;
+  border-radius: 20px;
   background-color: white;
 }
+@media screen and (max-width: 990px) {
+  .sub-main {
+    width: auto;
+    padding: 10px;
+  }
+}
+
 .imgs {
   padding-top: 20px;
   justify-content: center;
@@ -40,7 +47,7 @@
 input {
   width: 300px;
   height: 50px;
-  border-radius: 60px;
+  border-radius: 15px;
   background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
   box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
   border: none;
