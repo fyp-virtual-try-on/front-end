@@ -20,7 +20,7 @@
 }
 .About-name > :nth-child(2) {
   font-weight: bold;
-  color: var(--text);
+  color: var(--orange);
   font-size: 2rem;
 }
 .About-name > :nth-child(3) {

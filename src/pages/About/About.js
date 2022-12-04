@@ -22,7 +22,7 @@ Try on items, get accurate size visualization experience and style outfits
  all from within your elevated online store. Benefit from increased conversions, enhanced engagement, and significantly lower product returns.
           </span>
 
-          <button className=" button About-button">Guest Login</button>
+          <button className=" button About-button">SignUp </button>
         </div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>

@@ -270,7 +270,7 @@ function VirtualTry() {
           <div style={{ padding: "20px" }}>
             <div>
               <p style={{ textAlign: "center", fontWeight: "bold" }}>
-                Virtual TryOn Catalouge
+                TryOn Catalouge
               </p>
               <div className="item-listing">
                 {items.map((item) => (

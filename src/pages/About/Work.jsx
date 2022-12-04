@@ -7,6 +7,8 @@ import khadi from "../../images/khadi.png";
 import Jun from "../../images/Jun.png";
 // import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+
 import {Link} from 'react-scroll'
 const Works = () => {
   // context
@@ -34,9 +36,9 @@ const Works = () => {
             <br />
             ispum is simpley dummy text of printing
           </spane>
-          <Link to="contact" smooth={true} spy={true}>
+          <NavLink to="/SignUp" >
             <button className="button s-button">SignUp</button>
-          </Link>
+          </NavLink>
           <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
