@@ -17,9 +17,9 @@ import PaymentForm from "./PaymentForm";
 import Review from "./Review";
 function Copyright() {
   return (
-    <Typography variant="body2"  color="white" align="center">
+    <Typography variant="body2" color="white" align="center">
       {"Copyright © "}
-      <Link  color="white" href="https://mui.com/">
+      <Link color="white" href="https://mui.com/">
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
@@ -30,14 +30,56 @@ function Copyright() {
 
 const steps = ["Shipping address", "Payment details", "Review your order"];
 
-function getStepContent(step) {
+function getStepContent(
+  step,
+  cardName,
+  setCardName,
+  firstName,
+  LastName,
+  address1,
+  address2,
+  city,
+  country,
+  cardNumber,
+  setCardNumber,
+  setFirstName,
+  setLastName,
+  setAddress1,
+  setAddress2,
+  setCity,
+  setCountry
+) {
   switch (step) {
     case 0:
-      return <AddressForm />;
+      return (
+        <AddressForm
+          firstName={firstName}
+          LastName={LastName}
+          address1={address1}
+          setAddress1={setAddress1}
+          setFirstName={setFirstName}
+          setLastName={setLastName}
+        />
+      );
     case 1:
-      return <PaymentForm />;
+      return (
+        <PaymentForm
+          cardName={cardName}
+          cardNumber={cardNumber}
+          setCardName={setCardName}
+          setCardNumber={setCardNumber}
+        />
+      );
     case 2:
-      return <Review />;
+      return (
+        <Review
+          firstName={firstName}
+          LastName={LastName}
+          address1={address1}
+          cardName={cardName}
+          cardNumber={cardNumber}
+        />
+      );
     default:
       throw new Error("Unknown step");
   }
@@ -47,6 +89,14 @@ const theme = createTheme();
 
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
+  const [cardName, setCardName] = React.useState("");
+  const [firstName, setFirstName] = React.useState("");
+  const [LastName, setLastName] = React.useState("");
+  const [address1, setAddress1] = React.useState("");
+  const [address2, setAddress2] = React.useState("");
+  const [city, setCity] = React.useState("");
+  const [country, setCountry] = React.useState("");
+  const [cardNumber, setCardNumber] = React.useState("");
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -60,13 +110,25 @@ export default function Checkout() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <Container  component="main" maxWidth="sm" sx={{ mb: 4 , background:" #4d5198ba" }}>
+      <Container
+        component="main"
+        maxWidth="sm"
+        sx={{ mb: 4, background: " #4d5198ba" }}
+      >
         <Paper
-       
           variant="outlined"
-          sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } ,background:" #4d5198ba" }}
+          sx={{
+            my: { xs: 3, md: 6 },
+            p: { xs: 2, md: 3 },
+            background: " #4d5198ba",
+          }}
         >
-          <Typography  sx={{ color:"white" }} component="h1" variant="h4" align="center">
+          <Typography
+            sx={{ color: "white" }}
+            component="h1"
+            variant="h4"
+            align="center"
+          >
             Checkout
           </Typography>
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
@@ -89,15 +151,41 @@ export default function Checkout() {
             </React.Fragment>
           ) : (
             <React.Fragment>
-              {getStepContent(activeStep)}
+              {getStepContent(
+                activeStep,
+                cardName,
+                setCardName,
+                firstName,
+                LastName,
+                address1,
+                address2,
+                city,
+                country,
+                cardNumber,
+                setCardNumber,
+                setFirstName,
+                setLastName,
+                setAddress1,
+                setAddress2,
+                setCity,
+                setCountry
+              )}
+              ,
               <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                 {activeStep !== 0 && (
-                  <Button  className="button" style={{backgroundColor:"black", color:"white"}} onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
+                  <Button
+                    className="button"
+                    style={{ backgroundColor: "black", color: "white" }}
+                    onClick={handleBack}
+                    sx={{ mt: 3, ml: 1 }}
+                  >
                     Back
                   </Button>
                 )}
 
-                <Button  className="button" style={{backgroundColor:"black", color:"white"}} 
+                <Button
+                  className="button"
+                  style={{ backgroundColor: "black", color: "white" }}
                   variant="contained"
                   onClick={handleNext}
                   sx={{ mt: 3, ml: 1 }}
