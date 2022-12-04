@@ -26,19 +26,19 @@ export default function PaymentForm({
 
   return (
     <React.Fragment>
-      <Typography sx={{ color: "white" }} variant="h6" gutterBottom>
+      <Typography  variant="h6" gutterBottom>
         Payment method
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Card Name</InputLabel>
+            <InputLabel id="demo-simple-select-label">Payment method</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={cardName}
               variant="standard"
-              label="Card Name"
+              label="payment method"
               onChange={handleChange}
             >
               <MenuItem value={"Visa"}>
@@ -105,10 +105,10 @@ export default function PaymentForm({
         </Grid>
         <Grid item xs={12}>
           <FormControlLabel
-            sx={{ color: "white" }}
+            sx={{ color: "black" }}
             control={
               <Checkbox
-                sx={{ color: "white" }}
+                sx={{ color: "black" }}
                 color="secondary"
                 name="saveCard"
                 value="yes"

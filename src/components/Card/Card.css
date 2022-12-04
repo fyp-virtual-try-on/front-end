@@ -8,10 +8,9 @@
   align-items: center;
   width: 15rem;
   text-align: center;
-  box-shadow: rgb(167 35 235 / 25%) 6px 17px 22px 2px;
   background: rgba(255, 255, 255, 0.26);
-  border: 7px solid var(--text);
- 
+  border: 7px solid var(--orangeCard);
+  box-shadow: var(--boxShadow);
   border-radius: 20px;
   padding: 0px 26px 2rem 26px;
 }

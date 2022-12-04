@@ -21,7 +21,7 @@ function Services() {
           {" "}
           Mapping your favourite outfits on your 2d images  so <br /> you can visualize yourself in that outfit and make you buying decision more quickly.{" "}
         </span>
-        <button className="button s-button">ABout Us</button>
+        <button className="button s-button">About Us</button>
         <div className="blur s-blur" style={{ background: "#ABF1FF94" }}></div>
       </div>
 

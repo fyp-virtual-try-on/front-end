@@ -34,11 +34,11 @@ function Intro() {
                  Try on items, get accurate size recommendations and style outfits all from within your elevated online store. Benefit from increased conversions, enhanced engagement, and significantly lower product returns.
                  </span>
              </div>
-             <button className=" button i-button">Login As Guest</button>
+             <button className=" button i-button">Lets Start</button>
          </div>
-         <div className='middle'>
+         {/* <div className='middle'>
          <span> </span>
-         </div>
+         </div> */}
 <div className="i-right">
              {/* <img src={Vector1}alt="" />
             <img src={Vector2}alt="" /> */}

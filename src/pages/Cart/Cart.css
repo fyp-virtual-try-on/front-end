@@ -1,7 +1,8 @@
 .Cart {
   margin-top: 2rem;
   padding: 0;
-  background: var(--text);
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  /* background: var(--text); */
   /* height: 100vh; */
   display: flex;
   justify-content: center;

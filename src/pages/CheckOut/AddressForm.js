@@ -27,7 +27,7 @@ export default function AddressForm({
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Typography sx={{ color: "white" }} variant="h6" gutterBottom>
+      <Typography  variant="h6" gutterBottom>
         Shipping address
       </Typography>
       <Grid className="color" container spacing={3}>
@@ -132,10 +132,10 @@ export default function AddressForm({
         </Grid>
         <Grid item xs={12}>
           <FormControlLabel
-            sx={{ color: "white" }}
+            sx={{ color: "black" }}
             control={
               <Checkbox
-                sx={{ color: "white" }}
+                sx={{ color: "black" }}
                 color="secondary"
                 name="saveAddress"
                 value="yes"

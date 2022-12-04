@@ -87,7 +87,13 @@
   justify-content: center;
   padding-right: 34px;
 }
+.n-left{
+  
+}
+.n-left>img{
+  transform: scale(0.9);
 
+}
 
 @media screen and (max-width: 650px) {
   .n-list {

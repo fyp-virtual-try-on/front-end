@@ -29,7 +29,7 @@
   .circle::before {
       border-radius: 100%;
       content: '';
-      background-image: linear-gradient(to bottom, #f10a0a 0%, #3605a7 100%);
+      background-image: linear-gradient(to bottom, #f1ca0a 0%, #05a7919c 100%);
       top: -8px;
       left: -8px;
       bottom: -8px;

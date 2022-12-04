@@ -51,7 +51,7 @@ export default function Review({
 
   return (
     <React.Fragment>
-      <Typography sx={{ color: "white" }} variant="h6" gutterBottom>
+      <Typography  variant="h6" gutterBottom>
         Order summary
       </Typography>
       <List disablePadding>
@@ -66,7 +66,7 @@ export default function Review({
           <ListItemText primary="Total" />
           <Typography
             variant="subtitle1"
-            sx={{ fontWeight: 700, color: "white" }}
+            sx={{ fontWeight: 700 }}
           >
             $
             {cartItem?.length > 0
@@ -80,14 +80,14 @@ export default function Review({
       </List>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h6" gutterBottom sx={{ mt: 2, color: "white" }}>
+          <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
             Shipping
           </Typography>
           <Typography gutterBottom>{firstName + " " + LastName}</Typography>
           <Typography gutterBottom>{address1}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
-          <Typography variant="h6" gutterBottom sx={{ mt: 2, color: "white" }}>
+          <Typography variant="h6" gutterBottom sx={{ mt: 2}}>
             Payment details
           </Typography>
           <Grid container>

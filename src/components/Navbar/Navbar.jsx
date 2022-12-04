@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import SignIn from "../../pages/SignIn/SignIn";
 import SignUp from "../../pages/SignUp/SignUp";
 import About from "../../pages/About/About";
-
+import logo from "../../images/logo.png"
 function Navbar() {
   let activeStyle = {
     color: "black",
@@ -14,7 +14,8 @@ function Navbar() {
   return (
     <div className="n-wrapper">
       <div className="n-left">
-        <div className="n-name">TryOn couture</div>
+      <img src={logo}alt="" />
+        {/* <div className="n-name">TryOn couture</div> */}
       </div>
       <div className="n-right">
         <div className="n-list">
@@ -41,10 +42,10 @@ function Navbar() {
             </NavLink>
           </ul>
         </div>
-        <NavLink to="/SignUp" style={{ paddingRight: "26px" }}>
+        <NavLink to="/SignUp" style={{ paddingRight: "26px", paddingTop:"16px" }}>
           <button className="button navLink">SignUp</button>
         </NavLink>
-        <NavLink to="/SignIn">
+        <NavLink to="/SignIn" style={{ paddingRight: "26px", paddingTop:"16px" }}>
           <button className="button navLink">Signin</button>
         </NavLink>
       </div>

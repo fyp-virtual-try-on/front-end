@@ -113,18 +113,18 @@ export default function Checkout() {
       <Container
         component="main"
         maxWidth="sm"
-        sx={{ mb: 4, background: " #4d5198ba" }}
+        sx={{ mb: 4 }}
       >
         <Paper
           variant="outlined"
           sx={{
             my: { xs: 3, md: 6 },
             p: { xs: 2, md: 3 },
-            background: " #4d5198ba",
+            background: " linear-gradient(180deg,#fdc50feb 26.71%, #fb982f00 99.36%)",
           }}
         >
           <Typography
-            sx={{ color: "white" }}
+            
             component="h1"
             variant="h4"
             align="center"
@@ -175,7 +175,7 @@ export default function Checkout() {
                 {activeStep !== 0 && (
                   <Button
                     className="button"
-                    style={{ backgroundColor: "black", color: "white" }}
+                    style={{  backgroundColor: "black", color: "white"}}
                     onClick={handleBack}
                     sx={{ mt: 3, ml: 1 }}
                   >
