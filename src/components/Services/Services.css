@@ -1,5 +1,5 @@
 .services {
-  padding: 0 3rem 0 3rem;
+  padding: 0 2rem 0 2rem;
   display: flex;
   height: 90vh;
   margin-bottom: 8rem;
@@ -12,13 +12,13 @@
   position: relative;
 }
 .awesom > :nth-child(1) {
-  color: var(--black);
-  font-size: 3rem;
+  color: var(--text);
+  font-size: 3.1rem;
   font-weight: bold;
 }
 .awesom > :nth-child(2) {
-  color: var(--text);
-  font-size: 1.5rem;
+  color: var(--Black);
+  font-size: 1.7rem;
   font-weight: bold;
 }
 .awesom > :nth-child(3) {

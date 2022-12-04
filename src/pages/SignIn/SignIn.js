@@ -17,7 +17,7 @@ function SignIn() {
             </div>
           </div>
           <div>
-            <h1>SignIn Page</h1>
+            <h1 style={{color:" white" , fontSize: "1.4rem" }}>SignIn </h1>
 
             <div>
               <img src={email} alt="email" className="email" />
@@ -43,11 +43,11 @@ function SignIn() {
             <p className="link">
               <NavLink to="/SignUp">
                 {" "}
-                <a href="#">Forgot password ?</a>
+                <a href="#" style={{color:"white"}}>Forgot password ?</a>
               </NavLink>
               Or
               <NavLink to="/SignUp">
-                <a href="#">Sign Up</a>
+                <a href="#"style={{color:"white"}}>Sign Up</a>
               </NavLink>
             </p>
           </div>

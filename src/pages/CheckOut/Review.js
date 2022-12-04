@@ -40,7 +40,7 @@ const payments = [
 export default function Review() {
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
+      <Typography  sx={{ color:"white" }}  variant="h6" gutterBottom>
         Order summary
       </Typography>
       <List disablePadding>
@@ -53,21 +53,21 @@ export default function Review() {
 
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Total" />
-          <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
+          <Typography variant="subtitle1" sx={{ fontWeight: 700 , color:"white"}}>
             $34.06
           </Typography>
         </ListItem>
       </List>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
+          <Typography variant="h6" gutterBottom sx={{ mt: 2 , color:"white"}}>
             Shipping
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
           <Typography gutterBottom>{addresses.join(", ")}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
-          <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
+          <Typography variant="h6" gutterBottom sx={{ mt: 2, color:'white' }}>
             Payment details
           </Typography>
           <Grid container>

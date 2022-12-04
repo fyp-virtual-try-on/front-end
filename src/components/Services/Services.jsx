@@ -19,9 +19,7 @@ function Services() {
         <span>Services Include</span>
         <span>
           {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-          voluptate quis <br /> cum eius velit vel voluptatibus? Incidunt
-          reprehenderit ad natus enim rem corporis impedit{" "}
+          Mapping your favourite outfits on your 2d images  so <br /> you can visualize yourself in that outfit and make you buying decision more quickly.{" "}
         </span>
         <button className="button s-button">ABout Us</button>
         <div className="blur s-blur" style={{ background: "#ABF1FF94" }}></div>
@@ -31,13 +29,13 @@ function Services() {
       <div className="cards">
       <motion.div
           initial={{ left: "25rem" }}
-          whileInView={{ left: "14rem" }}
+          whileInView={{ left: "14rem",  boxShadow:"16px 28px 36px 15px rgba(139, 68, 130, 0.53)" }}
           transition={transition}
         >
         <Card
             emoji={heartemoji}
-            heading={"Design"}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
+            heading={"styled outfits "}
+            detail={"Western style clothing is finally Here!!! of your favourite Brands"}
           />
         </motion.div>
         {/* second div */}
@@ -48,8 +46,8 @@ function Services() {
         >
         <Card
             emoji={glasses}
-            heading={"Design"}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
+            heading={"Mapping"}
+            detail={" Gives you best visualization experience of your favourite outfit"}
           />
         
           
@@ -61,8 +59,8 @@ function Services() {
           >
         <Card
             emoji={humble}
-            heading={"Design"}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
+            heading={"online purchase"}
+            detail={"Purchase your styled outfit with more ease"}
           />
         
           

@@ -15,12 +15,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AddressForm from "./AddressForm";
 import PaymentForm from "./PaymentForm";
 import Review from "./Review";
-
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography variant="body2"  color="white" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link  color="white" href="https://mui.com/">
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
@@ -61,12 +60,13 @@ export default function Checkout() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
+      <Container  component="main" maxWidth="sm" sx={{ mb: 4 , background:" #4d5198ba" }}>
         <Paper
+       
           variant="outlined"
-          sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
+          sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } ,background:" #4d5198ba" }}
         >
-          <Typography component="h1" variant="h4" align="center">
+          <Typography  sx={{ color:"white" }} component="h1" variant="h4" align="center">
             Checkout
           </Typography>
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
@@ -92,12 +92,12 @@ export default function Checkout() {
               {getStepContent(activeStep)}
               <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                 {activeStep !== 0 && (
-                  <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
+                  <Button  className="button" style={{backgroundColor:"black", color:"white"}} onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
                     Back
                   </Button>
                 )}
 
-                <Button
+                <Button  className="button" style={{backgroundColor:"black", color:"white"}} 
                   variant="contained"
                   onClick={handleNext}
                   sx={{ mt: 3, ml: 1 }}

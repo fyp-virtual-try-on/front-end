@@ -16,9 +16,9 @@ function SignUp() {
             </div>
           </div>
           <div>
-            <h1>SignUp Page</h1>
+          <h1 style={{color:" white", fontSize: "1.4rem"}}>SignUp</h1>
             <div style={{ paddingTop: "20px" }}>
-              <img src={pass} alt="pass" className="su-email" />
+              {/* <img src={pass} alt="pass" className="su-email" /> */}
               <input
                 type="text"
                 placeholder="Firstname"
@@ -27,7 +27,7 @@ function SignUp() {
             </div>
 
             <div style={{ paddingTop: "20px" }}>
-              <img src={email} alt="email" className="su-email" />
+              {/* <img src={email} alt="email" className="su-email" /> */}
               <input
                 type="text"
                 placeholder="user name or email"
@@ -36,7 +36,7 @@ function SignUp() {
             </div>
 
             <div className="su-second-input">
-              <img src={pass} alt="pass" className="su-email" />
+              {/* <img src={pass} alt="pass" className="su-email" /> */}
               <input
                 type="password"
                 placeholder="user name"
@@ -48,9 +48,9 @@ function SignUp() {
             </div>
 
             <p className="su-link">
-              <a href="#">Forgot password ?</a> Or
+            <a href="#" style={{color:"white"}}>Forgot password ?</a> Or
               <NavLink to="/SignIn">
-                <a href="#">Sign In</a>
+              <a href="#"style={{color:"white"}}>SignIn</a>
               </NavLink>
             </p>
           </div>

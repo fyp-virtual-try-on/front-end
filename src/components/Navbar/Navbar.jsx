@@ -14,8 +14,7 @@ function Navbar() {
   return (
     <div className="n-wrapper">
       <div className="n-left">
-        <div className="n-name">Virtual TryOn</div>
-        <span>toogle</span>
+        <div className="n-name">TryOn couture</div>
       </div>
       <div className="n-right">
         <div className="n-list">
