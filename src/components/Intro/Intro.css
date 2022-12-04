@@ -1,7 +1,9 @@
 .intro {
   display: flex;
-  height: 77vh;
-  margin-top: 3rem;
+  height: 80vh;
+  margin-top: 1.5rem;
+  padding: 0 0rem 0 2rem;
+  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
 }
 
 @media screen and (max-width: 500px) {
@@ -10,12 +12,14 @@
   }
 }
 
+
 .i-left {
   display: flex;
   position: relative;
   flex: 1;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 150px;
 }
 .i-name {
   display: flex;
@@ -39,26 +43,28 @@
 }
 .i-button {
   width: 8rem;
-  height: 4rem;
+  height: 3rem;
 }
 .i-right {
   flex: 1;
   position: relative;
-  left: -4%;
+  /* left: -4%; */
+  background-image: linear-gradient(180deg, #fd9e0f ,#d4f9062e, #d8f90600);;
 }
 .i-right > * {
   position: absolute;
   z-index: 1;
 }
 .i-right > :nth-child(1) {
-  transform: scale(0.88);
-  left: 11%;
-  top: -9%;
+  transform: scale(1.6);
+  left: 50%;
+  top: 38.5%;
 }
 .i-right > :nth-child(2) {
-  transform: scale(0.76);
-  left: 6rem;
-  top: -4.6rem;
+  transform: scale(1.2);
+    left: 4rem;
+    top: 13.9rem;
+
 }
 .i-right > :nth-child(3) {
   padding-bottom: 1154px;
@@ -92,4 +98,14 @@
   z-index: -9;
   top: -17%;
   left: 66%;
+}
+.middle{
+ background: white; 
+ height: 50%;
+ position: relative;
+    top: 30%;
+    z-index: 1;
+    left: 5%;
+    width: 172px;
+   
 }

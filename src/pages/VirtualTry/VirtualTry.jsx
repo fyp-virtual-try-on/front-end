@@ -16,10 +16,10 @@ import Webcam from "react-webcam";
 import { useDispatch } from "react-redux";
 import { cartItem } from "../../store/cartItem/cartItemSlice";
 
-import img1 from "../../images/img_1.jpg";
-import img2 from "../../images/img_2.jpg";
-import img3 from "../../images/img_3.jpg";
-import img4 from "../../images/img_4.jpg";
+import img1 from "../../images/img_1.png";
+import img2 from "../../images/img_2.png";
+import img3 from "../../images/img_3.png";
+import img4 from "../../images/img_4.png";
 
 const { Dragger } = Upload;
 const videoConstraints = {
@@ -201,7 +201,7 @@ function VirtualTry() {
                       <p className="ant-upload-text">
                         Click or drag file to this area to upload
                       </p>
-                      <p className="ant-upload-hint">
+                      <p className="ant-upload-hint" >
                         Support for a single or bulk upload. Strictly prohibit
                         from uploading company data or other band files
                       </p>
@@ -309,9 +309,9 @@ function VirtualTry() {
               <div class="img-drop-down">
                 <span onClick={() => setIsCamera(true)}>Capture Image</span>
                 <Upload {...props}>
-                  <span style={{ color: "white" }}>Upload from Device</span>
+                  <span  style={{ color: "white" }}>Upload from Device</span>
                 </Upload>
-                <span onClick={() => handleOpenPicker()}>
+                <span onClick={() => handleOpenPicker()} >
                   Upload from Drive
                 </span>
               </div>

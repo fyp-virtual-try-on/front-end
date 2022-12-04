@@ -2,21 +2,43 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import { makeStyles } from "@material-ui/core/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-
-export default function AddressForm() {
+const useStyles = makeStyles({
+  input: {
+    color: "white",
+  },
+});
+export default function AddressForm({
+  firstName,
+  LastName,
+  address1,
+  address2,
+  city,
+  country,
+  setFirstName,
+  setLastName,
+  setAddress1,
+  setAddress2,
+  setCity,
+  setCountry,
+}) {
+  const classes = useStyles();
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
+      <Typography  variant="h6" gutterBottom>
         Shipping address
       </Typography>
-      <Grid container spacing={3}>
+      <Grid className="color" container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
+            inputProps={{ className: classes.input }}
             required
             id="firstName"
             name="firstName"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
             label="First name"
             fullWidth
             autoComplete="given-name"
@@ -27,6 +49,8 @@ export default function AddressForm() {
           <TextField
             required
             id="lastName"
+            value={LastName}
+            onChange={(e) => setLastName(e.target.value)}
             name="lastName"
             label="Last name"
             fullWidth
@@ -39,6 +63,8 @@ export default function AddressForm() {
             required
             id="address1"
             name="address1"
+            value={address1}
+            onChange={(e) => setAddress1(e.target.value)}
             label="Address line 1"
             fullWidth
             autoComplete="shipping address-line1"
@@ -47,6 +73,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            required
             id="address2"
             name="address2"
             label="Address line 2"
@@ -55,11 +82,14 @@ export default function AddressForm() {
             variant="standard"
           />
         </Grid>
+
         <Grid item xs={12} sm={6}>
           <TextField
             required
             id="city"
             name="city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
             label="City"
             fullWidth
             autoComplete="shipping address-level2"
@@ -68,6 +98,7 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            required
             id="state"
             name="state"
             label="State/Province/Region"
@@ -92,6 +123,8 @@ export default function AddressForm() {
             id="country"
             name="country"
             label="Country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
             fullWidth
             autoComplete="shipping country"
             variant="standard"
@@ -99,8 +132,14 @@ export default function AddressForm() {
         </Grid>
         <Grid item xs={12}>
           <FormControlLabel
+            sx={{ color: "black" }}
             control={
-              <Checkbox color="secondary" name="saveAddress" value="yes" />
+              <Checkbox
+                sx={{ color: "black" }}
+                color="secondary"
+                name="saveAddress"
+                value="yes"
+              />
             }
             label="Use this address for payment details"
           />

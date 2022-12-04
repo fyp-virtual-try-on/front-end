@@ -1,8 +1,17 @@
 :root {
+  /* --text: #4d5198;
+  --orange: #fca61f;
+  --Black: #060602;
+  --gray: #383b42;
+  --blueCard: #ddf8fe;
+  --purple: rgb(238 210 255);
+  --boxShadow: 0px 19px 60px rgb(0 0 0/8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0 0 0 0.08); */
   --yellow: #f5c32c;
   --orange: #fca61f;
   --Black: #242d49;
-  --gray: #788096;
+  --gray: #424652;
   --blueCard: #ddf8fe;
   --purple: rgb(238 210 255);
   --boxShadow: 0px 19px 60px rgb(0 0 0/8%);
@@ -13,9 +22,10 @@
   padding: 15px;
   overflow: hidden;
   color: var(--Black);
+
 }
 .button {
-  border-radius: 34px;
+  border-radius: 9px;
   border: none;
   color: white;
   font-size: 20px;
@@ -37,5 +47,8 @@
 
 .input-field-style {
   background: white;
-  border: 1px solid orange;
+  border: 1px solid var(--text);
+}
+body{
+  background-color: #ffcce78c;
 }

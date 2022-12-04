@@ -1,5 +1,5 @@
 .About {
-  display: flex;
+  /* display: flex; */
   /* height: 157vh; */
   margin-top: 3rem;
   align-items: center;
@@ -20,17 +20,18 @@
 }
 .About-name > :nth-child(2) {
   font-weight: bold;
-  color: var(--orange);
+  color: var(--text);
   font-size: 2rem;
 }
 .About-name > :nth-child(3) {
   font-weight: 100;
+  width:638px;
   color: var(--gray);
   font-size: 14px;
   margin-top: 10px;
 }
 .About-button {
-  width: 8rem;
+  /* width: 8rem; */
   height: 3rem;
   margin-top: 25px;
 }

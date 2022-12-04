@@ -2,12 +2,12 @@
 }
 .VT-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 500px 1fr 1fr;
   height: 566px;
 }
 @media screen and (max-width: 1500px) {
   .VT-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 500px 1fr;
     height: auto;
   }
 }
@@ -62,7 +62,7 @@ VT-dropdown {
 }
 
 .dropdown-content span:hover {
-  background-color: var(--orange);
+  background-color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -89,8 +89,9 @@ VT-dropdown {
   padding: 12px;
 }
 .img-drop-down span:hover {
-  background-color: var(--orange);
+  background-color: white;
   cursor: pointer;
+  color: black;
 }
 
 .item-selected {
@@ -105,7 +106,7 @@ VT-dropdown {
 .ant-upload-drag-container {
   background: url("../../images/image\ lgao.jpg") no-repeat center center;
   background-size: contain;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .item-listing {

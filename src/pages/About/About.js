@@ -13,18 +13,13 @@ function Intro() {
         <div className="About-name">
           <span>AboutUs</span>
           <span>
-            Shopping is Finally Easier With Personalized virtual Try-On
+           Bring Real World Shopping experience online
           </span>
           <span>
-            The leading virtual fitting and styling solution for business of all
-            sizes Try on items, get accurate size recommendations and style
-            outfits all from within your elevated online store. Benefit from
-            increased conversions, enhanced engagement, and significantly lower
-            product returns.The leading virtual fitting and styling solution for
-            business of all sizes Try on items, get accurate size
-            recommendations and style outfits all from within your elevated
-            online store. Benefit from increased conversions, enhanced
-            engagement, and significantly lower product returns.
+          The leading virtual fitting and styling solution for businesses of all sizes
+
+Try on items, get accurate size visualization experience and style outfits 
+ all from within your elevated online store. Benefit from increased conversions, enhanced engagement, and significantly lower product returns.
           </span>
 
           <button className=" button About-button">Guest Login</button>

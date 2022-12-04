@@ -85,6 +85,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 34px;
+}
+.n-left{
+  
+}
+.n-left>img{
+  transform: scale(0.9);
+
 }
 
 @media screen and (max-width: 650px) {
@@ -96,4 +104,10 @@
 
 .nav-li {
   padding: 10px;
+}
+.navlink{
+  color: black !important;
+}
+.n-name{
+  font-size: 1.8rem;
 }
