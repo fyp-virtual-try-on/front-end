@@ -22,7 +22,7 @@
   padding: 15px;
   overflow: hidden;
   color: var(--Black);
-
+background-color: #e7e8e8;
 }
 .button {
   border-radius: 9px;

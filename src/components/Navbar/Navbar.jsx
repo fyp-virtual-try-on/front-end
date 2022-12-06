@@ -33,7 +33,7 @@ function Navbar() {
               to="virtualTry"
             >
               {" "}
-              <li className="nav-li">VirtualTry </li>{" "}
+              <li className="nav-li">TryOn</li>{" "}
             </NavLink>
            
             <NavLink to="/About" className="navlink" style={({ isActive }) => (isActive ? activeStyle : undefined)}>

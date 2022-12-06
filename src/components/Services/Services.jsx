@@ -15,7 +15,7 @@ function Services() {
     <div className="services">
       {/* left div */}
       <div className="awesom">
-        <span>Virtual TryOn</span>
+        <span>METAWEAR</span>
         <span>Services Include</span>
         <span>
           {" "}
@@ -29,7 +29,7 @@ function Services() {
       <div className="cards">
       <motion.div
           initial={{ left: "25rem" }}
-          whileInView={{ left: "14rem",  boxShadow:"16px 28px 36px 15px rgba(139, 68, 130, 0.53)" }}
+          whileInView={{ left: "14rem" }}
           transition={transition}
         >
         <Card
